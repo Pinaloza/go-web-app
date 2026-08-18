@@ -8,7 +8,7 @@ image:
   repository: pinaloza/go-web-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "32172549207"
+  tag: "32176016829"
 
 ingress:
   enabled: false
