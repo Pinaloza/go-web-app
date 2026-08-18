@@ -26,13 +26,15 @@ func contactPage(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-
+	panic("VERSION 2 FAILED - ROLLBACK REQUIRED")
+	
 	http.HandleFunc("/home", homePage)
 	http.HandleFunc("/courses", coursePage)
 	http.HandleFunc("/about", aboutPage)
 	http.HandleFunc("/contact", contactPage)
 
-	log.Fatal(http.ListenAndServe("0.0.0.0:9999", nil))
-
+	err := http.ListenAndServe("0.0.0.0:8080", nil)
+	if err != nil {
+		log.Fatal(err)
 	}
-
+}
